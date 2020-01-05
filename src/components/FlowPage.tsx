@@ -4,6 +4,8 @@ import "antd/dist/antd.css";
 import GGEditor, { Flow } from "gg-editor";
 import { EditorMinimap , FlowContextMenu , FlowToolbar , FlowItemPanel , FlowDetailPanel } from "./Layout";
 import styles from "./FlowPage.module.css";
+import { SaveCommand } from './Custom/Command/SaveCommand'
+import { CustomNode } from './Custom/Shape'
 
 const data = {
   nodes: [
@@ -21,9 +23,11 @@ const data = {
     {
       type: "node",
       size: "70*70",
-      shape: "flow-circle",
+      shape: "custom-node",
       color: "#FA8C16",
       label: "Military",
+      labelOffsetY: 20,
+      icon: "//img.alicdn.com/tfs/TB1OzAmyyLaK1RjSZFxXXamPFXa-200-200.svg",
       x: 55,
       y: 255,
       id: "military",
@@ -56,6 +60,8 @@ export const FlowPage = () => {
         </Col>
         <Col span={16} className={styles.editorContent}>
           <Flow data={data} className={styles.flow} />
+          <SaveCommand/>
+          <CustomNode/>
         </Col>
         <Col span={4} className={styles.editorSidebar}>
           <FlowDetailPanel />

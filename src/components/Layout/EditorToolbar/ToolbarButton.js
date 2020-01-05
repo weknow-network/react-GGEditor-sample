@@ -4,6 +4,7 @@ import { Command } from 'gg-editor';
 import upperFirst from 'lodash/upperFirst';
 import IconFont from '../../Common/IconFont';
 import styles from './index.module.css';
+import { Button } from 'antd';
 
 export const ToolbarButton = (props) => {
   const { command, icon, text } = props;
@@ -15,7 +16,7 @@ export const ToolbarButton = (props) => {
         placement="bottom"
         overlayClassName={styles.tooltip}
       >
-        <IconFont type={`icon-${icon || command}`} />
+        { icon ? <IconFont type={`icon-${icon || command}`} /> : <Button>{command}</Button> }
       </Tooltip>
     </Command>
   );

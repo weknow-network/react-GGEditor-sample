@@ -25,6 +25,8 @@ export const FlowToolbar = () => {
       <ToolbarButton command="multiSelect" icon="multi-select" text="Multi Select" />
       <ToolbarButton command="addGroup" icon="group" text="Add Group" />
       <ToolbarButton command="unGroup" icon="ungroup" text="Ungroup" />
+      <Divider type="vertical" />
+      <ToolbarButton command="save"  />
     </Toolbar>
   );
 };
