@@ -26,3 +26,7 @@
   font-size: 12px;
   border-radius: 0;
 }
+.button {
+  margin-left: 3px;
+  margin-right: 3px;
+}
