@@ -27,6 +27,7 @@ export const FlowToolbar = () => {
       <ToolbarButton command="unGroup" icon="ungroup" text="Ungroup" />
       <Divider type="vertical" />
       <ToolbarButton command="save"  />
+      <ToolbarButton command="load"  />
     </Toolbar>
   );
 };

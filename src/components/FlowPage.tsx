@@ -4,7 +4,7 @@ import "antd/dist/antd.css";
 import GGEditor, { Flow } from "gg-editor";
 import { EditorMinimap , FlowContextMenu , FlowToolbar , FlowItemPanel , FlowDetailPanel } from "./Layout";
 import styles from "./FlowPage.module.css";
-import { SaveCommand } from './Custom/Command/SaveCommand'
+import { SaveCommand, LoadCommand } from './Custom/Command'
 import { CustomNode } from './Custom/Shape'
 
 const data = {
@@ -61,6 +61,7 @@ export const FlowPage = () => {
         <Col span={16} className={styles.editorContent}>
           <Flow data={data} className={styles.flow} />
           <SaveCommand/>
+          <LoadCommand/>
           <CustomNode/>
         </Col>
         <Col span={4} className={styles.editorSidebar}>
