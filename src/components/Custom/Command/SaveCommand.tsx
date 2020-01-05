@@ -1,11 +1,10 @@
 import React from "react";
 import { RegisterCommand, withPropsAPI } from "gg-editor";
-
 // https://github.com/alibaba/GGEditor/issues/205
 
 class SaveCommandImp extends React.Component {
   render() {
-    const { propsAPI } = this.props;
+    const { propsAPI }: any = this.props;
 
     const config = {
       queue: true,
@@ -15,8 +14,11 @@ class SaveCommandImp extends React.Component {
       },
 
       execute(/* editor */) {
+        const { save } = propsAPI;
         console.log("Save");
         console.log("Save：", propsAPI);
+
+        console.log(save && save());
       },
 
       // 反向命令逻辑

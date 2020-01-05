@@ -16,7 +16,7 @@ export const ToolbarButton = (props) => {
         placement="bottom"
         overlayClassName={styles.tooltip}
       >
-        { icon ? <IconFont type={`icon-${icon || command}`} /> : <Button>{command}</Button> }
+        { command === 'save' ? <Button>{command}</Button> : <IconFont type={`icon-${icon || command}`} />  }
       </Tooltip>
     </Command>
   );
