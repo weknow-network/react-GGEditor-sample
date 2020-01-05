@@ -83,7 +83,7 @@ class DetailForm extends React.Component {
 
   renderEdgeDetail = () => {
     const { form } = this.props;
-    const { label = "", shape = "flow-smooth" } = this.item.getModel();
+    const { label = "", shape = "flow-smooth", strength = 1 } = this.item.getModel();
 
     return (
       <>
@@ -96,6 +96,11 @@ class DetailForm extends React.Component {
           {form.getFieldDecorator("shape", {
             initialValue: shape
           })(this.renderEdgeShapeSelect())}
+        </Item>
+        <Item label="Strength" {...inlineFormItemLayout}>
+          {form.getFieldDecorator("strength", {
+            initialValue: strength
+          })(<Input type="number" onBlur={this.handleSubmit} />)}
         </Item>
       </>
     );
