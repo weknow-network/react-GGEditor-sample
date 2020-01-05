@@ -1,0 +1,15 @@
+.itemPanel {
+  flex: 1;
+  background: #fafafa;
+}
+.itemPanel :global .ant-card {
+  background: #fafafa;
+}
+.itemPanel :global .ant-card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.itemPanel :global .ant-card-body > div {
+  margin-bottom: 16px;
+}

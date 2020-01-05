@@ -1,0 +1,7 @@
+.detailPanel {
+  flex: 1;
+  background: #fafafa;
+}
+.detailPanel :global .ant-card {
+  background: #fafafa;
+}
